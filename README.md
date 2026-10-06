@@ -26,9 +26,7 @@ If your method or tutorial meet these criteria, *submit* it for review on the [M
 
 ### Criteria: Scope 
 * The method or tutorial is relevant for the social sciences.
-* The method or tutorial belongs to a relevant task of the [Methods Hub Tasks Taxonomy](https://methodshub.gesis.org/submit/taxonomy/).
-      
-###### If your method or tutorial does not fit into any of the current tasks in the [Methods Hub Tasks Taxonomy](https://methodshub.gesis.org/submit/taxonomy/), contact us at [methodshub@gesis.org][methodshub-email].
+* The method or tutorial belongs to a relevant task of the [Methods Hub Tasks Taxonomy](https://methodshub.gesis.org/submit/taxonomy/). If your method or tutorial does not fit into our taxonomy, contact us at [methodshub@gesis.org][methodshub-email].
 
 ### Criteria: Openness
 * The method or tutorial is developed in an open-source programming language (e.g., Python or R).
