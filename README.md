@@ -2,11 +2,11 @@
 
 You are interested in contributing a method or tutorial to the [Methods Hub](https://methodshub.gesis.org)? Here you can find all the information you need, for example:
 
-- [ ] What is the aim of Methods Hub?
-- [ ] What qualifies as a method? What qualifies as a tutorial?
-- [ ] What are the Methods Hub's submission criteria?
-- [ ] What do you need to prepare for your submission?
-- [ ] Where and how can you get support?
+* What is the aim of Methods Hub?
+* What qualifies as a method? What qualifies as a tutorial?
+* What are the Methods Hub's submission criteria?
+* What do you need to prepare for your submission?
+* Where and how can you get support?
 
 ## Aim of the Methods Hub
 The Methods Hub aims to provide social scientists with high-quality, open-access, and easy-to-use computational resources. We want to promote the use of computational methods in the social sciences, lower technical barriers, and build a community-driven space for the field. We offer interactive execution environments so everyone can try the methods with the click of a button.
