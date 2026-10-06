@@ -1,16 +1,25 @@
 # Methods Hub's Guidelines
 
-Here you will find the guidelines used by Methods Hub.
+You are interested in contributing a method or tutorial to the [Methods Hub](https://methodshub.gesis.org)? Here you can find all the information you need, for example:
 
-The Methods Hub aims to provide high-quality and easy-to-use computational methods and tutorials to social scientists. Offering such resources through the Methods Hub makes them directly available to the target audience. However, the Methods Hub only accepts resources that follow the principles of open science, that are available in a format that is accessible for social scientists, and that are relevant for social science research. A special focus of the Methods Hub is on resources that work on [digital behavioral data](https://www.gesis.org/en/institute/about-us/digital-behavioral-data), but also other resources are welcome.
+- [ ] What is the aim of Methods Hub?
+- [ ] What qualifies as a method? What qualifies as a tutorial?
+- [ ] What are the Methods Hub's submission criteria?
+- [ ] What do you need to prepare for your submission?
+- [ ] Where and how can you get support?
 
-A method for the Methods Hub is a sequence of instructions that a computer should execute to perform a specific task and that is bundled for reusability, as well as its documentation.
+## Aim of the Methods Hub
+The Methods Hub aims to provide social scientists with high-quality, open-access, and easy-to-use computational resources. We want to promote the use of computational methods in the social sciences, lower technical barriers, and build a community-driven space for the field. We offer interactive execution environments so everyone can try the methods with the click of a button.
 
-A tutorial is an instructional resource that may be used as a part of a self-guided learning process. Tutorials on the Methods Hub should focus on very concrete tasks and offer code that helps researchers to solve the task. This could be via applications of methods that are featured on the Methods Hub, but could also refer to methods publised elsewhere. A tutorial can feature more than one method. Tutorials will be prefaced with what prior knowledge is expected from the user such that the user can judge themselves if they have the required skills to follow the tutorial.
+A **method** for the Methods Hub is a sequence of instructions that a computer should execute to perform a specific task and that is bundled for reusability, as well as its documentation (e.g., an R package).
 
-To be included in the Methods Hub, a resource is checked to see if it fulfills the criteria in the [publishing checklist](#publishing-checklist) below. If you believe your resource meets these criteria, submit it for review on the [Methods Hub Portal](https://methodshub.gesis.org). More details on documentation and code quality, check the [Quality Criteria](guidelines.md#quality-criteria) section of the guidelines.
+A **tutorial** is an instructional resource that may be used as part of a self-guided learning process. Tutorials on the Methods Hub should focus on very concrete tasks and offer code that helps researchers to solve the task. This could be via applications of methods that are featured on the Methods Hub, but could also refer to methods published elsewhere. A tutorial can feature more than one method. Tutorials will be prefaced with what prior knowledge is expected from the user such that the user can judge themselves if they have the required skills to follow the tutorial.
+
 
 ## Publishing checklist
+The Methods Hub accepts only resources that follow the principles of open science, are available in a format accessible to social scientists, and are relevant to social science research. A special focus of the Methods Hub is on resources that work on [digital behavioral data](https://www.gesis.org/en/institute/about-us/digital-behavioral-data), but other resources are also welcome.
+
+To be included in the Methods Hub, a resource is checked to see if it fulfills the criteria in the [publishing checklist](#publishing-checklist) below. If you believe your resource meets these criteria, submit it for review on the [Methods Hub Portal](https://methodshub.gesis.org). More details on documentation and code quality, check the [Quality Criteria](guidelines.md#quality-criteria) section of the guidelines.
 
 Each method or tutorial submitted to the [Methods Hub](https://methodshub.gesis.org/) is checked for compliance with the following criteria before publication.
 
@@ -66,63 +75,6 @@ You can suggest further venues by mail to the [Methods Hub team][methodshub-emai
 - [ ] The method code contains documentation (comments) for parameters and decisions that allows one to adjust the method.
 - [ ] The method code is structured into modules (if need be).
 
-## Binder environment
-
-These binder configuration files can be located at the root level or in a directory named `.binder` or `binder`. In the following sections, we will assume these files to be located in `binder`.
-
-Specifically for the Methods Hub, the following files **must** be available among the binder configuration files:
-
-1. `binder/postBuild` file that facilitates Quarto installation. The `postBuild` can be downloaded from https://methodshub.gesis.org/snippet/postBuild/.
-2. configuration files that record the computational environment, e.g. dependencies. See the following sections on how to create these files for different programming languages.
-
-### Python
-
-Create `binder/requirements.txt` using `pip`.
-
-```bash
-python3 -m pip freeze > binder/requirements.txt
-```
-
-The `binder/requirements.txt` should look like [`binder-examples/python/requirements.txt`](binder-examples/python/requirements.txt).
-
-It is strongly recommended to pin the version of the dependencies.
-
-### R
-
-`install.packages()` or similar commands for installing R packages (e.g. `pak::pkg_install()`, `devtools::install_github()`) should **not** be called from the tutorial source file (e.g. `qmd`, `rmd`, or `.ipynb`).
-
-Instead, create `binder/runtime.txt` (which contains the current R version and a snapshot date) and `binder/install.R`.
-
-```bash
-## Record the current R version and use the current date as the snapshot date
-Rscript -e "writeLines(paste0('r-', getRversion(), '-', format(Sys.time(), '%Y-%m-%d')), 'binder/runtime.txt')" 
-```
-
-And add `install.packages()` calls to `binder/install.R`. The `binder/install.R` should look like [`binder-examples/r/install.R`](binder-examples/r/install.R).
-
-Currently, we do not support the tool `renv` to pin the version. Using such tools to pin the version is also not neccessary, because [P3M](https://posit.co/products/cloud/public-package-manager/) is used when creating a binder environment. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
-
-If there is a need to illustrate the installation process using `install.packages()` or similar commands for installing R packages, set the code block to `eval: false` as illustrated in [`tutorial/template.qmd`](tutorial/template.qmd).
-
-### Many languages (conda)
-
-If you use `conda` to configure your computational environment, create `binder/environment.yml` with
-
-```bash
-## Export the current active environment
-conda env export > binder/environment.yml
-```
-
-or
-
-```bash
-## Export a specific environment, e.g. environment-name
-conda env export -n environment-name > binder/environment.yml
-```
-
-The `binder/environment.yml` should look like [`binder-examples/conda/environment.yml`](binder-examples/conda/environment.yml).
-
-It is strongly recommended to pin the version of the dependencies.
 
 ## Frequently asked questions
 
