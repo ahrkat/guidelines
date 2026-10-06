@@ -1,4 +1,4 @@
-# Methods Hub's Guidelines
+# Methods Hub's Submission Guidelines
 
 You are interested in contributing a method or tutorial to the [Methods Hub](https://methodshub.gesis.org)? Here you can find all the information you need, for example:
 
