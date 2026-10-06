@@ -8,7 +8,8 @@ You are interested in contributing a method or tutorial to the [Methods Hub](htt
 * How to prepare your submission?
 * Where and how can you get [support](#support)?
 
-## Aim and scope of the Methods Hub {#aim-scope}
+## Aim and scope of the Methods Hub
+{#aim-scope}
 The Methods Hub aims to provide social scientists with high-quality, open-access, and easy-to-use computational resources for **data collection**, **preprocessing**,**data analysis**, **data visualization**, **validation and evaluation**, and **computational workflows**. A special focus of the Methods Hub is on resources that work on [digital behavioral data](https://www.gesis.org/en/institute/about-us/digital-behavioral-data), but other resources are also welcome. 
 
 By that, we want to promote the use of computational methods in the social sciences, lower technical barriers, and build a community-driven space for the field. We also offer interactive execution environments so everyone can try the methods with a click. 
