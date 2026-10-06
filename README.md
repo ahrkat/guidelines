@@ -2,50 +2,50 @@
 
 You are interested in contributing a method or tutorial to the [Methods Hub](https://methodshub.gesis.org)? Here you can find all the information you need, for example:
 
-* What are the aim and scope of Methods Hub?
-* What are the Methods Hub's submission criteria?
+* What are the [aim and scope](#aim-scope) of Methods Hub?
+* What are the Methods Hub's [submission criteria](#submission-criteria)?
 * What qualifies as a method? What qualifies as a tutorial?
 * How to prepare your submission?
-* Where and how can you get support?
+* Where and how can you get [support](#support)?
 
-## Aim and scope of the Methods Hub
+## Aim and scope of the Methods Hub {#aim-scope}
 The Methods Hub aims to provide social scientists with high-quality, open-access, and easy-to-use computational resources for **data collection**, **preprocessing**,**data analysis**, **data visualization**, **validation and evaluation**, and **computational workflows**. A special focus of the Methods Hub is on resources that work on [digital behavioral data](https://www.gesis.org/en/institute/about-us/digital-behavioral-data), but other resources are also welcome. 
 
 By that, we want to promote the use of computational methods in the social sciences, lower technical barriers, and build a community-driven space for the field. We also offer interactive execution environments so everyone can try the methods with a click. 
 
-A **method** for the Methods Hub is a computational procedure that can be employed to address social science problems. It is published in a code repository, encompassing scripts, packages, libraries, or notebooks and follows our guidelines–most importantly being reusable, free, and open source software (FOSS). For example, you can submit an R package for data preprocessing of social media data to the Methods Hub. For more details on how to prepare a method, check [Method Template](https://methodshub.gesis.org/).
+A **method** on the Methods Hub is a computational procedure that can be employed to address social science problems. It is published in a code repository, encompassing scripts, packages, libraries, or notebooks and follows our guidelines–most importantly being reusable, free, and open source software (FOSS). For example, you can submit an R package for data preprocessing of social media data to the Methods Hub. For more details on how to prepare a method, check [Method Template](https://methodshub.gesis.org/).
 
-A **tutorial** in the Methods Hub is a written, recorded and/or interactive introduction to a workflow, tool, or one or more methods. It is an instructional resource that may be used as part of a self-guided learning process. Tutorials on the Methods Hub should focus on concrete tasks and offer code that helps researchers solve them (e.g., how to preprocess data for topic modeling). This could involve applying methods featured on the Methods Hub, but it could also refer to methods published elsewhere. A tutorial can feature more than one method. For more details on how to prepare a tutorial, check [Tutorial Template](https://methodshub.gesis.org/). 
+A **tutorial** on the Methods Hub is a written, recorded and/or interactive introduction to a workflow, tool, or one or more methods. It is an instructional resource that may be used as part of a self-guided learning process. Tutorials on the Methods Hub should focus on concrete tasks and offer code that helps researchers solve them (e.g., how to preprocess data for topic modeling). This could involve applying methods featured on the Methods Hub, but it could also refer to methods published elsewhere. A tutorial can feature more than one method. For more details on how to prepare a tutorial, check [Tutorial Template](https://methodshub.gesis.org/). 
 
-## Submission criteria
+## Submission criteria {#submission-criteria}
 The Methods Hub publishes resources that 1) fall within the **scope** of social science and relevant to it, 2) follow the principles of **open** science, and 3) meet standards of **quality** and accessibility. 
 
 If your method or tutorial meet these criteria, *submit* it for review on the [Methods Hub Portal](https://methodshub.gesis.org). Each method or tutorial submitted to the [Methods Hub](https://methodshub.gesis.org/) is checked for compliance with the criteria before publication. Each criterion is described in more detail below. 
 
 ### Criteria: Scope 
-- [ ] The method or tutorial is relevant for the social sciences.
-- [ ] The method or tutorial belongs to a relevant task of the [Methods Hub Tasks Taxonomy](https://methodshub.gesis.org/submit/taxonomy/).
+* The method or tutorial is relevant for the social sciences.
+* The method or tutorial belongs to a relevant task of the [Methods Hub Tasks Taxonomy](https://methodshub.gesis.org/submit/taxonomy/).
       
 ###### If your method or tutorial does not fit into any of the current tasks in the [Methods Hub Tasks Taxonomy](https://methodshub.gesis.org/submit/taxonomy/), contact us at [methodshub@gesis.org][methodshub-email].
 
 ### Criteria: Openness
-- [ ] The method or tutorial is developed in an open-source programming language (e.g., Python or R).
-- [ ] The method or tutorial is publicly accessible in a Git repository.
-- [ ] If a method, the Git repository has one and only one method.
-- [ ] The method or tutorial is [published under an open license](https://opensource.guide/legal/#which-open-source-license-is-appropriate-for-my-project).
+* The method or tutorial is developed in an open-source programming language (e.g., Python or R).
+* The method or tutorial is publicly accessible in a Git repository.
+* If a method, the Git repository has one and only one method.
+* The method or tutorial is [published under an open license](https://opensource.guide/legal/#which-open-source-license-is-appropriate-for-my-project).
 
 ### Criteria: Quality
 We differentiate between documentation and code quality. 
 
 #### Documentation quality
 In this section, you will learn what files must be in your Git repository before your submission.
-- [ ] The method or tutorial repository contains the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/examples/sample_repos.html#managing-languages) for Methods Hub.
-- [ ] The method or tutorial repository contains the configuration files for installing all requirements (e.g., `environment.yml`, `requirements.txt`, `install.R`).
-- [ ] The method or tutorial repository contains the [postBuild](https://methodshub.gesis.org/snippet/postBuild) file that facilitates Quarto installation.
-- [ ] The binder environment is set up without errors.
-- [ ] The method or tutorial repository contains a `LICENSE` file (corresponding to an [open license](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)) at the root level of the repository.
-- [ ] The method or tutorial repository contains a [`CITATION.cff`](https://citation-file-format.github.io/) file at the root level of the repository.
-- [ ] The method or tutorial repository contains a file, selected in the submission form, that follows the structure of the templates.
+* The method or tutorial repository contains the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/examples/sample_repos.html#managing-languages) for Methods Hub.
+* The method or tutorial repository contains the configuration files for installing all requirements (e.g., `environment.yml`, `requirements.txt`, `install.R`).
+* The method or tutorial repository contains the [postBuild](https://methodshub.gesis.org/snippet/postBuild) file that facilitates Quarto installation.
+* The binder environment is set up without errors.
+* The method or tutorial repository contains a `LICENSE` file (corresponding to an [open license](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)) at the root level of the repository.
+* The method or tutorial repository contains a [`CITATION.cff`](https://citation-file-format.github.io/) file at the root level of the repository.
+* The method or tutorial repository contains a file, selected in the submission form, that follows the structure of the templates.
 
   If a method, this file must be a [Methods Hub friendly README](./method/template.md?plain=1) (can be  `README.me` or another file).
 
@@ -58,12 +58,12 @@ In this section, you will learn what files must be in your Git repository before
   | [R Markdown](https://rmarkdown.rstudio.com/) |`.rmd` | | If possible, should be ported to Quarto. |
   | [(Pandoc) Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) | `.md` | | |
   
-- [ ] All examples in the method or tutorial repository can be reproduced with reasonable accuracy using only publicly available resources.
+* All examples in the method or tutorial repository can be reproduced with reasonable accuracy using only publicly available resources.
 
 #### Code quality
 
-- [ ] The method code contains documentation (comments) for parameters and decisions that allows one to adjust the method.
-- [ ] The method code is structured into modules (if need be).
+* The method code contains documentation (comments) for parameters and decisions that allows one to adjust the method.
+* The method code is structured into modules (if need be).
 
 The code quality criteria can be skipped for methods for which a paper is published by the following [trusted third-party review venues](guidelines.md#trusted-third-party-review-venues):
 
@@ -87,7 +87,7 @@ All necessary files are described above in Documentation Quality. *But you can a
 6. Now wait for us to take a look at your submission to check whether our Methods Hub criteria are fulfilled. We might return to you with some suggestions to improve your submission or accept it for publication.
 7. Once published, your method or tutorial will get an own page on the Methods Hub and also assigned a DOI that you can share and others can cite!
   
-## Support and contact
+## Support and contact {#support}
 You have some open questions or want to contact us for other Methods Hub-related reasons?
 The [Methods Hub team](https://www.gesis.org/en/services/processing-and-analyzing-data/analyzing-digital-behavioral-data/gesis-methods-hub) is happy to support you!
 
