@@ -12,21 +12,22 @@ You are interested in contributing a method or tutorial to the [Methods Hub](htt
 ## Aim and scope of the Methods Hub
 The Methods Hub aims to provide social scientists with high-quality, open-access, and easy-to-use computational resources for **data collection**, **preprocessing**, **data analysis**, **data visualization**, **validation and evaluation**, and **computational workflows**. A special focus of the Methods Hub is on resources that work on [digital behavioral data](https://www.gesis.org/en/institute/about-us/digital-behavioral-data), but other resources are also welcome. 
 
-By that, we want to promote the use of computational methods in the social sciences, lower technical barriers, and build a community-driven space for the field. We also offer interactive execution environments so everyone can try the methods with just one click. 
+By that, we want to promote the use of computational methods in the social sciences, lower technical barriers, and build a community-driven space for the field. We also offer [interactive executation environments](#interactive-env) so everyone can try methods and tutorials with a single click. For the contributors, we want to provide a platform where they can reach their community. Every published item on the Methods Hub gets a DOI assigned, making the resources citable. 
 
 #### You can publish methods and tutorials on the Methods Hub
 
 A **method** on the Methods Hub is a computational procedure that can be employed to address social science problems. It is published in a code repository, encompassing scripts, packages, libraries, or notebooks and follows our guidelines–most importantly being reusable, free, and open source software (FOSS). For example, you can submit an R package for data preprocessing of social media data to the Methods Hub. For more details on how to prepare a method, check [Method Template](https://methodshub.gesis.org/).
 
-Some example methods:
+Some example methods: [ADD MORE]
 
 A **tutorial** on the Methods Hub is a written, recorded and/or interactive introduction to a workflow, tool, or one or more methods. It is an instructional resource that may be used as part of a self-guided learning process. Tutorials on the Methods Hub should focus on concrete tasks and offer code that helps researchers solve them (e.g., how to preprocess data for topic modeling). This could involve applying methods featured on the Methods Hub, but it could also refer to methods published elsewhere. A tutorial can feature more than one method. For more details on how to prepare a tutorial, check [Tutorial Template](https://methodshub.gesis.org/). 
 
-Some example tutorials:
+Some example tutorials: [ADD MORE]
 
+<a id="interactive-env"></a>
 #### A bonus: Interactive environments
 
-To ensure an exploratory user experience, we prefer methods and tutorials that include interactive elements where users can modify one or more parameters to see how their changes affect the script's behavior. For this, we integrate so-called Interactive Environments. Add more. Learn below how to optimize your method or tutorial to provide a great [interactive user experience](https://methodshub.gesis.org/).
+To ensure an exploratory user experience, we prefer methods and tutorials that include interactive elements where users can modify one or more parameters to see how their changes affect the script's behavior. For this, we integrate so-called Interactive Environments. [ADD MORE] Learn below how to optimize your method or tutorial to provide a great [interactive user experience](https://methodshub.gesis.org/).
 
 <a id="submission-criteria"></a>
 ## Submission criteria
@@ -36,7 +37,7 @@ If your method or tutorial meet these criteria, *submit* it for review on the [M
 
 ### Criteria: Scope 
 * The method or tutorial is relevant for the social sciences.
-* The method or tutorial belongs to a relevant task of the [Methods Hub Tasks Taxonomy](https://methodshub.gesis.org/submit/taxonomy/). If your method or tutorial does not fit into our taxonomy, contact us at [methodshub@gesis.org][methodshub-email].
+* The method or tutorial belongs to a relevant task of the [Methods Hub Tasks Taxonomy](https://methodshub.gesis.org/submit/taxonomy/). If your method or tutorial does not fit into our taxonomy, contact us at [methodshub@gesis.org](mailto:methodshub@gesis.org).
 
 ### Criteria: Openness
 * The method or tutorial is developed in an open-source programming language (e.g., Python or R).
@@ -45,20 +46,17 @@ If your method or tutorial meet these criteria, *submit* it for review on the [M
 * The method or tutorial is [published under an open license](https://opensource.guide/legal/#which-open-source-license-is-appropriate-for-my-project).
 
 ### Criteria: Quality
-Here we outline documentation and code quality criteria. **Additionally, we provide some guidance on the interactive environments.**
+Here we outline documentation and code quality criteria. [ADD SOMETHING ON INTERACTIVE ENV?]
 
 #### Documentation quality
 In this section, you will learn what files must be in your Git repository before your submission.
 * Most importantly, the method or tutorial Git repository needs to include a file that contains the content that is rendered on the Methods Hub page. Therefore, it should follow the structure of our templates. 
     * If a method, this file must be a [Methods Hub friendly README](./method/template.md?plain=1) (can be  `README.me` or another file).
     * If a tutorial, this file must be the tutorial itself in one of the accepted formats:
-
-  | Format | File extension | Template | Notes |
-  | --- | --- | --- | --- |
-  | [Quarto](https://quarto.org/) | `.qmd` | [`tutorial/template.qmd`](tutorial/template.qmd) | |
-  | [Jupyter Notebook Format](https://nbformat.readthedocs.io/en/latest/index.html) | `.ipynb` | [`tutorial/template.ipynb`](tutorial/template.ipynb) | Limited to a single programming language. |
-  | [R Markdown](https://rmarkdown.rstudio.com/) |`.rmd` | | If possible, should be ported to Quarto. |
-  | [(Pandoc) Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) | `.md` | | |
+        * [Quarto](https://quarto.org/), with `.qmd` as file extension. Here you can find a template: [`tutorial/template.qmd`](tutorial/template.qmd)
+        * [Jupyter Notebook Format](https://nbformat.readthedocs.io/en/latest/index.html) with `.ipynb` as file extension. Here you can find a template: [`tutorial/template.ipynb`](tutorial/template.ipynb). Jupyter Notebook is limited to a single programming language.
+        * [R Markdown](https://rmarkdown.rstudio.com/) with `.rmd` as file extension. If possible, should be ported to Quarto.
+        * [(Pandoc) Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) with `.md` as file extension.
   
 
 * The method or tutorial repository contains the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/examples/sample_repos.html#managing-languages) for Methods Hub.
@@ -88,21 +86,22 @@ You can suggest further venues by email to the [Methods Hub team][methodshub-ema
 Your method or tutorial checks the criteria and you are ready to submit? Use this checklist as a guide through our submission process:
 
 1. Prepare your submission
+   
 All necessary files are described above in Documentation Quality. Here is a checklist of what your Git repository should contain depending on whether you submit a method or a tutorial:
 
   | File | Resource | Purpose | Template | Notes |
   | --- | --- | --- | --- | --- |
-  | README | Method | Contains content | [`tutorial/template.qmd`](tutorial/template.qmd)[`tutorial/template.ipynb`](tutorial/template.ipynb)   | |
+  | README | Method | Contains content | [README Template](./method/template.md?plain=1)  | |
   | Tutorial File | Tutorial | Contains content | [`tutorial/template.qmd`](tutorial/template.qmd) or [`tutorial/template.ipynb`](tutorial/template.ipynb) | Other options: R md, pandoc markdown |
-| Requirements | both | For reproducibility | R: install.R, Python: requirements.txt, mixed: environment.yml  | | |
-  | postBuild | both | Helps build process | LINK | |
-  | LICENSE | both | Contains content | EXAMPLE LINK | | |
-  | CITATION | both | Contains citation | EXAMPLE LINK | | |
+| Requirements | both | For reproducibility | R: install.R, Python: requirements.txt, mixed: environment.yml [ADD EXAMPLES] | | |
+  | postBuild | both | Helps build process | [postBuild](https://methodshub.gesis.org/snippet/postBuild) | |
+  | LICENSE | both | Contains content | [ADD EXAMPLE] | | |
+  | CITATION | both | Contains citation | [ADD EXAMPLE] | | |
 
 3. Use our [Interactive Test Area]([link](https://methodshub.gesis.org/submit/test-area)) to see whether your resource works for the different interactive environments featured on our platform.
 4. Set up an account on Methods Hub or log into your account
-5. Ready for submission? Move to *Submit* -> ...
-6. Fill out the form and submit
+5. Ready for submission? Move to *Submit* -> ... [ADD MORE]
+6. Fill out the form and 
 7. Now wait for us to take a look at your submission to check whether our Methods Hub criteria are fulfilled. We might return to you with some suggestions to improve your submission or accept it for publication.
 8. Once published, your method or tutorial will get an own page on the Methods Hub and also assigned a DOI that you can share and others can cite!
 
