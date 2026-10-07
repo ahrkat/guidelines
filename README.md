@@ -49,7 +49,7 @@ If your method or tutorial meet these criteria, *submit* it for review on the [M
 Here we outline documentation and code quality criteria. [ADD SOMETHING ON INTERACTIVE ENV?]
 
 #### Documentation quality
-In this section, you will learn what files must be in your Git repository before your submission.
+In this section, you will learn what files **must** be in your Git repository before your submission.
 * Most importantly, the method or tutorial Git repository needs to include a file that contains the content that is rendered on the Methods Hub page. Therefore, it should follow the structure of our templates. 
     * If a method, this file must be a [Methods Hub friendly README](./method/template.md?plain=1) (can be  `README.me` or another file).
     * If a tutorial, this file must be the tutorial itself in one of the accepted formats:
@@ -59,13 +59,25 @@ In this section, you will learn what files must be in your Git repository before
         * [(Pandoc) Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) with `.md` as file extension.
   
 
-* The method or tutorial repository contains the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/examples/sample_repos.html#managing-languages) for Methods Hub.
-    * The method or tutorial repository contains the configuration files for installing all requirements (e.g., for Python: `requirements.txt`, for R: `install.R`), for mixed: `environment.yml`, 
+* The method or tutorial repository contains the necessary files for setting up a [binder environment](https://mybinder.readthedocs.io/en/latest/examples/sample_repos.html#managing-languages) for Methods Hub. These binder configuration files can be located at the root level or in a directory named `.binder` or `binder`.
+    * The method or tutorial repository contains a configuration files for installing all requirements (e.g., for Python: [`requirements.txt`](binder-examples/python/requirements.txt), for R: [`install.R`](binder-examples/r/install.R), for other languages such as conda: [`environment.yml`](binder-examples/conda/environment.yml)). We recommend pinning the version of the dependencies.
     * The method or tutorial repository contains the [postBuild](https://methodshub.gesis.org/snippet/postBuild) file that facilitates Quarto installation.
     * The binder environment is set up without further errors.
 * The method or tutorial repository contains a `LICENSE` file (corresponding to an [open license](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)) at the root level of the repository.
 * The method or tutorial repository contains a [`CITATION.cff`](https://citation-file-format.github.io/) file at the root level of the repository.
 * All examples in the method or tutorial repository can be reproduced with reasonable accuracy using only publicly available resources. 
+
+Here is a checklist of what your Git repository should contain depending on whether you submit a method or a tutorial:
+
+  | File | Resource | Purpose | Template | Notes |
+  | --- | --- | --- | --- | --- |
+  | README | Method | Contains content | [README Template](./method/template.md?plain=1)  | |
+  | Tutorial File | Tutorial | Contains content | [`tutorial/template.qmd`](tutorial/template.qmd) or [`tutorial/template.ipynb`](tutorial/template.ipynb) | Other options: R md, pandoc markdown |
+| Requirements | both | For reproducibility | Python: [`requirements.txt`](binder-examples/python/requirements.txt), R: [`install.R`](binder-examples/r/install.R), or other such as conda: [`environment.yml`](binder-examples/conda/environment.yml) | Pin versions of dependencies| |
+  | postBuild | both | Helps build process | [postBuild](https://methodshub.gesis.org/snippet/postBuild) | |
+  | LICENSE | both | Contains content | [ADD EXAMPLE] | | |
+  | CITATION | both | Contains citation | [ADD EXAMPLE] | | |
+
 
 
 #### Code quality
@@ -85,19 +97,7 @@ You can suggest further venues by email to the [Methods Hub team][methodshub-ema
 ## Submission process checklist
 Your method or tutorial checks the criteria and you are ready to submit? Use this checklist as a guide through our submission process:
 
-1. Prepare your submission
-   
-All necessary files are described above in Documentation Quality. Here is a checklist of what your Git repository should contain depending on whether you submit a method or a tutorial:
-
-  | File | Resource | Purpose | Template | Notes |
-  | --- | --- | --- | --- | --- |
-  | README | Method | Contains content | [README Template](./method/template.md?plain=1)  | |
-  | Tutorial File | Tutorial | Contains content | [`tutorial/template.qmd`](tutorial/template.qmd) or [`tutorial/template.ipynb`](tutorial/template.ipynb) | Other options: R md, pandoc markdown |
-| Requirements | both | For reproducibility | R: install.R, Python: requirements.txt, mixed: environment.yml [ADD EXAMPLES] | | |
-  | postBuild | both | Helps build process | [postBuild](https://methodshub.gesis.org/snippet/postBuild) | |
-  | LICENSE | both | Contains content | [ADD EXAMPLE] | | |
-  | CITATION | both | Contains citation | [ADD EXAMPLE] | | |
-
+1. Prepare your submission: All necessary files are described above in Documentation Quality. 
 3. Use our [Interactive Test Area]([link](https://methodshub.gesis.org/submit/test-area)) to see whether your resource works for the different interactive environments featured on our platform.
 4. Set up an account on Methods Hub or log into your account
 5. Ready for submission? Move to *Submit* -> ... [ADD MORE]
